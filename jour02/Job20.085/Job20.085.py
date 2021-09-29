@@ -2,7 +2,7 @@ class Board:
     def __init__(self, i, j):
         self.i = i
         self.j = j
-        self.grille = [[" "] * j for i in range(j)]
+        self.grille = [["O"] * j for i in range(j)]
 
     def afficherBoard(self):
         for x in range(self.i):
@@ -11,10 +11,10 @@ class Board:
             print(" |\n")
 
     def isEmpty(self, x, y):
-        if self.grille[x][y] == "O" or self.grille[x][y] == "J" or self.grille[x][y] == "R":
-            return False
-        else:
+        if self.grille[x][y] == "O":
             return True
+        else:
+            return False
 
     def play(self, column, couleur):
         if column < 0 or column > self.j - 1:
