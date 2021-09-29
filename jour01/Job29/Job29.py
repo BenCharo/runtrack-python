@@ -17,6 +17,6 @@ def draw_triangle(height):
         dist = dist + 1
 
 
-draw_triangle(5)
+draw_triangle(3)
 
 
