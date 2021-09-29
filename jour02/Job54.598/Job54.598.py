@@ -37,7 +37,7 @@ class AI_One:
         self.couleur = couleur
 
     def think(self, board):
-        for i in range(board.i - 1):
+        for i in range(board.i - 1, 0):
             for j in range(board.j - 1):
                 if board.grille[i][j] != "O" and (board.grille[i][j] == board.grille[i][j + 1] and board.grille[i][j] == board.grille[i][j + 2] or ((board.grille[i][j] == board.grille[i][j + 1]) and board.isEmpty(i, j-1) is True and board.isEmpty(i, j + 3) is True)):
                     if board.isEmpty(i, j + 3) is True:
@@ -66,14 +66,14 @@ class AI_One:
                     elif board.isEmpty(i + 1, j - 1) is True:
                         board.play(j + 1, self.couleur)
                         return
-                else:
-                    board.play(random.randrange(0, board.j + 1), self.couleur)
+        board.play(random.randrange(0, board.j + 1), self.couleur)
 
 
 
 board = Board(5, 5)
 IA = AI_One("R")
 board.play(1, "J")
-IA.think(board)
+board.play(2, "J")
 board.play(3, "J")
+IA.think(board)
 board.afficherBoard()
