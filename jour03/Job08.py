@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 
 file = open("data.txt", "r")
 line = file.read()
-split = re.split(" ", line)
+split = line.split()
 file.close()
 
 dic = {}
@@ -16,5 +16,7 @@ for i in split:
         dic[len(i)] = 1
 
 print(dic)
-plt.bar(dic.keys(), dic.values(), 0.75, color='r')
+list = list(dic.keys())
+
+plt.bar(dic.keys(), dic.values(), 0.75, color='r', tick_label=list)
 plt.show()

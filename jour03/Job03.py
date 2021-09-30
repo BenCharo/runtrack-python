@@ -3,7 +3,7 @@ import re
 file = open("data.txt", "r")
 line = file.read()
 file.close()
-x = re.split(" ", line) #on sépare le texte en tableau de mot pour les tester un a un
+x = line.split() #on sépare le texte en tableau de mot pour les tester un a un
 cpt = 0
 
 taille = int(input("Des mots de quelle taille voulez-vous chercher ?\n"))
