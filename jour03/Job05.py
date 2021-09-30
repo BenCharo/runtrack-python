@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+import re
 
 file = open("data.txt", "r")
 line = file.read()
@@ -11,7 +12,8 @@ alph_upp = sorted(y)
 dic = {}
 for i in range(25):
     cpt = line.count(alph[i]) + line.count(alph_upp[i])
-    dic[alph_upp[i]] = cpt
+    dic[alph_upp[i]] = cpt/(len(line))
+
 
 print(dic)
 plt.bar(dic.keys(), dic.values(), 0.75, color='g')
