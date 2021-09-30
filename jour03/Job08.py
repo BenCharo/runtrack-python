@@ -3,8 +3,9 @@ import matplotlib.pyplot as plt
 
 file = open("data.txt", "r")
 line = file.read()
-split = line.split()
 file.close()
+line.lower()
+split = line.split()
 
 dic = {}
 for i in split:

@@ -3,6 +3,7 @@ import re
 file = open("data.txt", "r")
 line = file.read()
 file.close()
+line.lower()
 x = line.split() #on sépare le texte en tableau de mot pour les tester un a un
 cpt = 0
 
