@@ -3,7 +3,7 @@ import re
 file = open("data.txt", "r")
 line = file.read()
 file.close()
-x = re.split("\s", line) #on sépare le texte en tableau de mot pour les tester un a un
+x = re.split(" ", line) #on sépare le texte en tableau de mot pour les tester un a un
 cpt = 0
 
 

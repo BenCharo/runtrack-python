@@ -14,5 +14,5 @@ for i in range(25):
     dic[alph_upp[i]] = cpt
 
 print(dic)
-plt.bar(dic.keys(), dic.values(), 1.0, color='g')
+plt.bar(dic.keys(), dic.values(), 0.75, color='g')
 plt.show()
