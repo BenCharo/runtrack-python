@@ -1,5 +1,4 @@
 import matplotlib.pyplot as plt
-import re
 
 file = open("data.txt", "r")
 line = file.read()
