@@ -1,9 +1,10 @@
 def factorielle(k):
     if k > 0:
         fact = k * factorielle(k-1)
-        print(fact)
     else:
         fact = 1
     return fact
 
-factorielle(6)
+
+x = int(input("Choisissez le nombre dont vous voulez calculer la factorielle\n"))
+print(x, "! =", factorielle(x))
