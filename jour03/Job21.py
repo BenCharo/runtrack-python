@@ -10,5 +10,6 @@ alph = sorted(x)
 
 split = line.split()
 
+
 tab = []
 
